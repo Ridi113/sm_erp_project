@@ -141,7 +141,7 @@ class Employee(models.Model):
     update_time = models.DateTimeField(null=False, blank=False, auto_now=True)
 
     def __str__(self):
-        return f'{self.employee, self.designation, self.department}'
+        return f'{self.employee}'
 
 class EmployeePersonalInformation(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

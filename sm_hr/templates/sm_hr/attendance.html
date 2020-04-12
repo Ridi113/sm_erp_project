@@ -14,15 +14,15 @@
 		</div>
 	</div>
 
-	<div class="col-md">
-		<div class="card card-body">
-			<h5>Contact Information</h5>
-			<hr>
-			<p>Email: </p>
-			<p>Phone: </p>
-            <p>Alternative Phone Number: </p>
-		</div>
-	</div>
+<!--	<div class="col-md">-->
+<!--		<div class="card card-body">-->
+<!--			<h5>Contact Information</h5>-->
+<!--			<hr>-->
+<!--			<p>Email: </p>-->
+<!--			<p>Phone: </p>-->
+<!--            <p>Alternative Phone Number: </p>-->
+<!--		</div>-->
+<!--	</div>-->
 
 <!--	<div class="col-md">-->
 <!--		<div class="card card-body">-->
@@ -65,13 +65,22 @@
 		<div class="card card-body">
 			<table class="table table-sm">
 				<tr>
-                    <th>Employee Id</th>
 					<th>Employee Name</th>
                     <th>Date</th>
 					<th>In time</th>
                     <th>Out time</th>
                     <th>remarks</th>
 				</tr>
+
+				{% for i in attendance %}
+							<tr>
+								<td>{{i.employee}}</td>
+								<td>{{i.att_date}}</td>
+								<td>{{i.time_in}}</td>
+								<td>{{i.time_out}}</td>
+								<td>{{i.remarks}}</td>
+							</tr>
+				{% endfor %}
 
 			</table>
 		</div>

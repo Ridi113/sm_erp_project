@@ -45,7 +45,7 @@ attendance_absent = firstEmployee.attendance_set.filter(status="Absent").count()
 #Returns total count for each product orderd
 allAttendance = {}
 
-for attendace_first in firstEmployee.order_set.all():
+for attendace_first in firstEmployee.attendance_set.all():
 	if attendace_first.attendance_id in allAttendace:
 		allAttendace[attendace_first.id] += 1
 	else:

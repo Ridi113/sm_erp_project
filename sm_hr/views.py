@@ -1,17 +1,36 @@
 from django.shortcuts import render
 from  django.http import HttpResponse
-def home(request):
-    return HttpResponse('Hello, World!')
+from .models import *
+
 
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'sm_hr/dashboard.html')
+    attendance = Attendance.objects.all()
+    employee = Employee.objects.all()
+
+    total_employee = employee.filter(status="Active").count()
+
+    total_attendance = attendance.count()
+    present = attendance.filter(status='Present').count()
+    absent = attendance.filter(status='Absent').count()
+
+    context = {'attendance': attendance, 'employee': employee,
+               'total_employee': total_employee, 'total_attendance': total_attendance,
+               'present': present,
+               'absent': absent}
+
+    return render(request, 'sm_hr/dashboard.html', context)
 
 def employee(request):
     # return HttpResponse("Employee page")
-    return render(request, 'sm_hr/employee.html')
+    employee = Employee.objects.all()
+
+    return render(request, 'sm_hr/employee.html', {'employee': employee})
+
 
 def attendance(request):
-    return render(request, 'sm_hr/attendance.html')
+    attendance = Attendance.objects.all()
+
+    return render(request, 'sm_hr/attendance.html', {'attendance': attendance})
