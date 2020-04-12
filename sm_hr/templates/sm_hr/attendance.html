@@ -5,7 +5,7 @@
 	<br>
 
 <div class="row">
-	<div class="col-md">
+	<div class="col-md-5">
 		<div class="card card-body">
 			<h5>Employee:</h5>
 			<hr>
@@ -14,15 +14,15 @@
 		</div>
 	</div>
 
-<!--	<div class="col-md">-->
-<!--		<div class="card card-body">-->
-<!--			<h5>Contact Information</h5>-->
-<!--			<hr>-->
-<!--			<p>Email: </p>-->
-<!--			<p>Phone: </p>-->
-<!--            <p>Alternative Phone Number: </p>-->
-<!--		</div>-->
-<!--	</div>-->
+	<div class="col-md-5">
+		<div class="card card-body">
+			<h5>Total Leave</h5>
+			<hr>
+			<p>{{attendance_count}}</p>
+
+		</div>
+
+	</div>
 
 <!--	<div class="col-md">-->
 <!--		<div class="card card-body">-->
@@ -66,19 +66,27 @@
 			<table class="table table-sm">
 				<tr>
 					<th>Employee Name</th>
+					<th>Designation</th>
+					<th>Department</th>
                     <th>Date</th>
 					<th>In time</th>
                     <th>Out time</th>
                     <th>remarks</th>
+					<th>Update</th>
+					<th>Remove</th>
 				</tr>
 
-				{% for i in attendance %}
+				{% for attendance in attendance_employee %}
 							<tr>
-								<td>{{i.employee}}</td>
-								<td>{{i.att_date}}</td>
-								<td>{{i.time_in}}</td>
-								<td>{{i.time_out}}</td>
-								<td>{{i.remarks}}</td>
+								<td>{{attendance.employee}}</td>
+								<td>{{attendance.employee.designation}}</td>
+								<td>{{attendance.employee.department}}</td>
+								<td>{{attendance.att_date}}</td>
+								<td>{{attendance.time_in}}</td>
+								<td>{{attendance.time_out}}</td>
+								<td>{{attendance.remarks}}</td>
+								<td><a class="btn btn-sm btn-info" href="">Update</a></td>
+								<td><a class="btn btn-sm btn-danger" href="">Remove</a></td>
 							</tr>
 				{% endfor %}
 

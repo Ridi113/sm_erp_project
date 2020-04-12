@@ -30,7 +30,15 @@ def employee(request):
     return render(request, 'sm_hr/employee.html', {'employee': employee})
 
 
-def attendance(request):
+def attendance(request, pk_test):
+    employee = Employee.objects.get(id=pk_test)
     attendance = Attendance.objects.all()
 
-    return render(request, 'sm_hr/attendance.html', {'attendance': attendance})
+    attendance_employee = employee.attendance_set.all()
+    attendance_count = attendance_employee.count()
+    absent_count = attendance_employee.filter(status="Absent").count()
+
+    context = {'employee': employee, 'attendance': attendance, 'attendance_employee': attendance_employee, 'attendance_count': attendance_count,
+               'absent_count': absent_count}
+
+    return render(request, 'sm_hr/attendance.html', context)

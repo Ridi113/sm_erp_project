@@ -9,7 +9,7 @@ from . import views
 from sm_hr import views
 
 urlpatterns = [
-    path('', views.home),
-    path('employee/', views.employee),
-    path('attendance/', views.attendance),
+    path('', views.home, name="home"),
+    path('employee/', views.employee, name='employee'),
+    path('attendance/<str:pk_test>/', views.attendance, name="attendance"),
     ]

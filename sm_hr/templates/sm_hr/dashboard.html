@@ -16,11 +16,10 @@
 			<a class="btn btn-primary  btn-sm btn-block" href="">Create Employee</a>
 			<table class="table table-sm">
 				<tr>
-					<th></th>
 					<th>Employee</th>
                     <th>Designation</th>
 					<th>Department</th>
-                    <th>Section</th>
+					<th>View Attendance Details</th>
 				</tr>
 
 				{% for employee in employee %}
@@ -28,6 +27,7 @@
 						<td>{{employee.employee}}</td>
 						<td>{{employee.designation}}</td>
 						<td>{{employee.department}}</td>
+						<td><a class="btn btn-sm btn-info" href="{% url 'attendance' employee.id %}">View</a></td>
 					</tr>
 				{% endfor %}
 
@@ -60,7 +60,7 @@
 						<td>{{attendance.time_in}}</td>
 						<td>{{attendance.time_out}}</td>
 						<td>{{attendance.remarks}}</td>
-						<td><a href="">Update</a></td>
+						<td><a class="btn btn-sm btn-info" href="">Update</a></td>
 					</tr>
 				{% endfor %}
 
