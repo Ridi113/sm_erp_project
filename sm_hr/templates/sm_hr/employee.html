@@ -1,0 +1,84 @@
+{%  extends 'sm_hr/main.html' %}
+
+{% block content %}
+
+	<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Employee:</h5>
+			<hr>
+			<a class="btn btn-outline-info  btn-sm btn-block" href="">Update Employee</a>
+			<a class="btn btn-outline-danger  btn-sm btn-block" href="">Change Status</a>
+
+		</div>
+	</div>
+
+	<div class="col-md">
+		<div class="card card-body">
+			<h5>Contact Information</h5>
+			<hr>
+			<p>Email: </p>
+			<p>Phone: </p>
+            <p>Alternative Phone Number: </p>
+		</div>
+	</div>
+
+<!--	<div class="col-md">-->
+<!--		<div class="card card-body">-->
+<!--			<h5>Employee Personal Information</h5>-->
+<!--			<hr>-->
+<!--			<p>Father's Name: </p>-->
+<!--			<p>Mother's Name: </p>-->
+<!--            <p>Date of Birth: </p>-->
+<!--			<p>National ID: </p>-->
+<!--            <p>Passport Number: </p>-->
+<!--			<p>Country: </p>-->
+<!--            <p>Gender: </p>-->
+<!--            <p>Blood Group: </p>-->
+<!--            <p>Religion: </p>-->
+<!--            <p>Division: </p>-->
+<!--            <p>District: </p>-->
+<!--            <p>Present Address: </p>-->
+<!--            <p>Parmanent Address: </p>-->
+<!--		</div>-->
+<!--	</div>-->
+</div>
+
+
+<br>
+<div class="row">
+	<div class="col">
+		<div class="card card-body">
+			<form method="get">
+
+		    <button class="btn btn-primary" type="submit">Search</button>
+		  </form>
+		</div>
+	</div>
+	
+</div>
+<br>
+
+<div class="row">
+	<div class="col-md">
+		<div class="card card-body">
+			<table class="table table-sm">
+				<tr>
+                    <th>Employee Id</th>
+					<th>Employee Name</th>
+                    <th>Designation</th>
+					<th>Department</th>
+                    <th>Section</th>
+                    <th>Company</th>
+                    <th>joining_date</th>
+                    <th>is_active</th>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
