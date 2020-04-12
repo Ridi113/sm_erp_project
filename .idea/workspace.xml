@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="086b3475-34cd-4b88-88cd-583009ab3757" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sm_hr/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sm_hr/templates/sm_hr/attendance_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sm_hr/templates/sm_hr/employee_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sm_hr/templates/sm_hr/attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/sm_hr/templates/sm_hr/attendance.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sm_hr/templates/sm_hr/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/sm_hr/templates/sm_hr/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sm_hr/templates/sm_hr/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/sm_hr/templates/sm_hr/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sm_hr/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sm_hr/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sm_hr/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sm_hr/views.py" afterDir="false" />
     </list>

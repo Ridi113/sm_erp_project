@@ -5,20 +5,12 @@
 	<br>
 
 <div class="row">
-	<div class="col-md-5">
-		<div class="card card-body">
-			<h5>Employee:</h5>
-			<hr>
-			<a class="btn btn-outline-info  btn-sm btn-block" href="">Update Employee Attendance</a>
-
-		</div>
-	</div>
 
 	<div class="col-md-5">
 		<div class="card card-body">
 			<h5>Total Leave</h5>
 			<hr>
-			<p>{{attendance_count}}</p>
+			<p>{{absent_count}}</p>
 
 		</div>
 
@@ -73,7 +65,6 @@
                     <th>Out time</th>
                     <th>remarks</th>
 					<th>Update</th>
-					<th>Remove</th>
 				</tr>
 
 				{% for attendance in attendance_employee %}
@@ -85,8 +76,7 @@
 								<td>{{attendance.time_in}}</td>
 								<td>{{attendance.time_out}}</td>
 								<td>{{attendance.remarks}}</td>
-								<td><a class="btn btn-sm btn-info" href="">Update</a></td>
-								<td><a class="btn btn-sm btn-danger" href="">Remove</a></td>
+								<td><a class="btn btn-sm btn-info" href="{% url 'update_attendance' attendance.id %}">Update</a></td>
 							</tr>
 				{% endfor %}
 
